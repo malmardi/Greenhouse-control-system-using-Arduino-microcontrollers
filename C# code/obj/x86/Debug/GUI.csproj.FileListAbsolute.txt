@@ -1,0 +1,62 @@
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\bin\Debug\GUI.exe
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\bin\Debug\GUI.pdb
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Murad\AppData\Local\Temporary Projects\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Murad\Desktop\GUI\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\Murad\Desktop\GUI\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Murad\Desktop\GUI\GUI\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.exe
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\MAZARIProject\Desktop\GUI\GUI\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Murad\Desktop\2\GUI\GUI\GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Murad\Desktop\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Murad\Desktop\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\obj\x86\Debug\GUI.csproj.GenerateResource.Cache
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\Mardini\Desktop\GUI\2 - Copy\2 - Copy\GUI\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\Mardini\Desktop\last update\GUI\GUI\obj\x86\Debug\GUI.exe
+C:\Users\Mardini\Desktop\last update\GUI\GUI\obj\x86\Debug\GUI.pdb
+C:\Users\Mardini\Desktop\last update\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\Mardini\Desktop\last update\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\Mardini\Desktop\last update\GUI\GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mardini\Desktop\last update\GUI\GUI\obj\x86\Debug\GUI.Form1.resources
+C:\Users\Mardini\Desktop\last update\GUI\GUI\obj\x86\Debug\GUI.Properties.Resources.resources
+C:\Users\Mardini\Desktop\last update\GUI\GUI\obj\x86\Debug\GUI.csproj.GenerateResource.Cache
+G:\ALL\last update\last code-sunday\C# code\obj\x86\Debug\GUI.exe
+G:\ALL\last update\last code-sunday\C# code\obj\x86\Debug\GUI.pdb
+G:\ALL\last update\last code-sunday\C# code\bin\Debug\GUI.exe
+G:\ALL\last update\last code-sunday\C# code\bin\Debug\GUI.pdb
+G:\ALL\last update\last code-sunday\C# code\obj\x86\Debug\GUI.csprojResolveAssemblyReference.cache
+G:\ALL\last update\last code-sunday\C# code\obj\x86\Debug\GUI.Form1.resources
+G:\ALL\last update\last code-sunday\C# code\obj\x86\Debug\GUI.Properties.Resources.resources
+G:\ALL\last update\last code-sunday\C# code\obj\x86\Debug\GUI.csproj.GenerateResource.Cache

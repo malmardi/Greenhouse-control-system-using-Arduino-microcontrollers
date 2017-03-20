@@ -1,0 +1,248 @@
+/*
+  AnalogReadSerial
+ Reads an analog input on pin 0, prints the result to the serial monitor 
+ 
+ This example code is in the public domain.
+ */
+
+/*
+Light sensor is connected to port A0
+Temperature sensor is connected to port A1
+Humidity sensor is connected to port A2
+
+
+*/
+
+int mode=7;
+int serialIn;
+int flag=0;//used for scheduled(Automatic) irrigation...set by default to 1....when the schedule ends, the main station will set the flag to 0 via serial port.
+int serial2;
+int flagLight=0;
+int flagTemp=0;
+int flagHum=0;
+int sensorType=0;
+int send_flage=0;
+
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+   pinMode(5, INPUT);
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
+
+
+      
+}
+
+void loop() {
+
+  int sensorLight = analogRead(A0);//to get light sensor readings
+  int sensorTemp = analogRead(A1); //to get Temp sensor readings
+  int sensorHumidity = analogRead(A2);
+  char packet[]="-";//to recognize the packet
+sensorTemp=sensorTemp/7.5;
+//  sensorTemp=(sensorTemp*3.125-500)/10;// temperature conversion equation : Ta=(Vout -V@0c)/Tc
+   sensorHumidity=(sensorHumidity*0.003125-0.958)/0.0307;
+
+
+
+  
+  /*each packet contains the following parts: [-,(0 , 1 or 2),sensor reading] */
+  
+ 
+  /*
+  following lines are to get the mode from the main station. 
+  
+  possible modes are : 
+  0 for Automatic----->when selected LED connected to port 11 will be ON
+  1 for Manual   ----->when selected LED connected to port 12 will be ON
+  2 for Sensor   ----->when selected LED connected to port 13 will be ON
+  
+  */
+
+    
+serial2= Serial.read();
+
+if(serial2==115)
+{
+  send_flage=serial2;
+}
+
+ if(send_flage==115)
+  {
+  //sending light readings
+  Serial.print(packet);
+
+  Serial.print('N');
+  Serial.print(sensorLight);
+  delay(50);
+  
+  //sending temp readings
+  Serial.print(packet);
+
+  Serial.print('K');
+  Serial.print(sensorTemp);
+  
+  //sending Humidity readings
+  Serial.print(packet);
+
+  Serial.print('J');
+  Serial.print(sensorHumidity);
+  send_flage=0;
+  }
+
+
+//flag value used in Automatic(scheduled) mode    52(4):start of the schedule 53(5) end of the schedule
+if(serial2==52 || serial2==53)
+{
+  flag=serial2;
+}
+//mode values: 48(0): Automatic mode   49(1): Manual mode    50(2): Sensor mode
+if(serial2==48 || serial2==49 || serial2==50)
+{
+  mode=serial2;
+}
+/*flagLight is used in the sensor mode to know when the light is above or lower than the predefined threshold.   
+if the flagLight is 65(A): ligh is insufficient and artificial light is ON*/
+if(serial2==65 || serial2==66)
+{
+  flagLight=serial2;
+}
+/*flagTemp is used in the sensor mode to know when the Temp is above or lower than the predefined threshold.   
+if the flagTemp is 67(C): Temp is high and cooling is ON*/
+
+if(serial2==67 || serial2==68)
+{
+  flagTemp=serial2;
+}
+
+/*flagHum is used in the sensor mode to know when the Humidity is above or lower than the predefined threshold.   
+if the flagHum is 69(E): Humidity is low and cooling is ON*/
+
+if(serial2==69 || serial2==70)
+{
+  flagHum=serial2;
+}
+
+//sensorType is used in the sensor mode to know which threshold are we receiving from the serial port
+// light 54(6)   Temp  55(7)     Humidity  56(8)
+if(serial2==54 || serial2==55 || serial2==56)
+{
+  sensorType=serial2;
+}   
+   
+  //Mode 0 Automatic, 48 represent the ASCII for number           
+  if (mode==48)
+  {
+    digitalWrite(8, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(10, LOW);
+    
+         
+      if(flag==53)
+      {
+         digitalWrite(8, LOW); //to turn the LED connected to port 10 ON
+         digitalWrite(9, LOW);
+         digitalWrite(10, LOW);
+      }
+      
+      if(flag==52)
+      {
+         digitalWrite(8, HIGH); //to turn the LED connected to port 10 ON
+         digitalWrite(9, HIGH);
+         digitalWrite(10, HIGH);
+      }
+   
+      
+      }
+      
+ //Mode 1 Manual, 49 represent the ASCII for number 1
+  else if(mode==49)
+  {
+    digitalWrite(8, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(10, LOW);
+    
+    if(digitalRead(5)==LOW)
+    {
+    digitalWrite(8, HIGH); //to turn the LED connected to port 11 ON
+    }
+    
+    if(digitalRead(6)==LOW)
+    {
+    digitalWrite(9, HIGH);
+    }
+    
+    if(digitalRead(7)==LOW)
+    {
+    digitalWrite(10, HIGH);
+    }
+  }
+  
+ //Mode 2 Sensor, 50 represent the ASCII for number 2
+  else if (mode==50)
+  {
+    
+    if (sensorType==54)//light sensor
+  {
+    
+         
+      if(flagLight==66)
+      {
+         digitalWrite(8, LOW); 
+      }
+      
+      if(flagLight==65)
+      {
+         digitalWrite(8, HIGH);
+      }
+   
+      
+      }
+      
+      if (sensorType==55)//Temp sensor
+  {
+    
+         
+      if(flagTemp==68)
+      {
+         digitalWrite(9, LOW);
+      }
+      
+      if(flagTemp==67)
+      {
+         digitalWrite(9, HIGH);
+      }
+   
+      
+      }
+      
+      if (sensorType==56)//Hum sensor
+  {
+    
+         
+      if(flagHum==70)
+      {
+         digitalWrite(10, LOW);
+      }
+      
+      if(flagHum==69)
+      {
+         digitalWrite(10, HIGH);
+      }
+   
+      
+      }
+    
+    
+    
+
+  }
+
+}//End of the loop
